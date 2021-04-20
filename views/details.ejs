@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <p>
+            <%=item.quote%>
+        </p>
+        <p>
+            <%=item.character%>
+        </p>
+        <img src="<%=item.image%>" alt="">
+        <p>
+            <%=item.characterDirection%>
+        </p>
+        <button id="#edit-form"> Update details</button>
+        <form action="/update/<%=item.id%>?_method=PUT" method="post" id="#update-form">
+            <input type="text" name="quote" value="<%=item.quote%>">
+            <input type="text" name="character" value='<%=item.character%>'>
+            <input type="text" name="image" value='<%=item.image%>'>
+            <input type="text" name="characterDirection" value='<%=item.characterDirection%>'>
+            <input type="submit" value="Update quote">
+        </form>
+        <form action="/delete/<%=item.id%>?_method=delete" method="post">
+            <input type="submit" value="Delete quotes">
+        </form>
+    </section>``
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $('#edit-form').click(() => {
+        $('#update-form').toggle();
+    })
+    console.log("ouch!")
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./layout/head.ejs') %>
+</head>
+
+<body>
+
+
+    <%- include('./layout/header.ejs') %>
+        <section class="favContainer">
+
+            <% data.forEach(item => { %>
+                <div>
+                    <p>
+                        <%=item.quote%>
+                    </p>
+                    <p>
+                        <%=item.character%>
+                    </p>
+                    <a href='/favorite-quotes/<%=item.id%>'> <img src="<%=item.image%>" alt=""></a>
+                    <p>
+                        <%=item.characterDirection%>
+                    </p>
+                </div>
+                <% }); %>
+        </section>
+</body>
+
+</html>

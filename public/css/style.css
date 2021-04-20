@@ -1,0 +1,44 @@
+body {
+    background-color: #62C8E4
+}
+
+header {
+    background-color: #16a085;
+    margin-bottom: 20px;
+}
+
+ul img {
+    height: 100px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    margin: 0
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.indexContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+form {
+    background-color: #16a085;
+}
+
+.favContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

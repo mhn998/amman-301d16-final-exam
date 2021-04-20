@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./layout/head.ejs') %>
+</head>
+
+<body>
+
+    <%- include('./layout/header.ejs') %>
+        <section class="indexContainer">
+            <% data.forEach(item=> { %>
+                <form action="/addCharacter" method="post">
+                    <p>
+                        <%=item.quote%>
+                    </p>
+                    <p>
+                        <%=item.character%>
+                    </p>
+                    <img src="<%=item.image%>" alt="">
+                    <p>
+                        <%=item.characterDirection%>
+                    </p>
+
+                    <input type="hidden" name="quote" value="<%=item.quote%>">
+                    <input type="hidden" name="character" value='<%=item.character%>'>
+                    <input type="hidden" name="image" value='<%=item.image%>'>
+                    <input type="hidden" name="characterDirection" value='<%=item.characterDirection%>'>
+                    <input type="submit" value="Save quote">
+                </form>
+                <% }); %>
+        </section>
+
+</body>
+
+</html>
