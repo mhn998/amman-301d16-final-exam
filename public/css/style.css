@@ -1,5 +1,6 @@
 body {
-    background-color: #62C8E4
+    background-color: #62C8E4;
+    font-family: sans-serif;
 }
 
 header {
@@ -41,4 +42,27 @@ form {
 .favContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form img {
+    width: 250px;
+    height: 200px;
+}
+
+div img {
+    width: 250px;
+    height: 200px;
+}
+
+input[type="submit"] {
+    background-color: yellow;
+}
+
+div {
+    background-color: #16a085;
+    padding: 20px;
+    width: 300px;
 }
